@@ -10,7 +10,7 @@ public class Main {
         String userinput;
 
         Chef chef = new Chef();
-        Entry comingcustomers = new Entry();
+        Entry comingCustomers = new Entry();
         Attender attender1 = new Attender(0);
         Attender attender2 = new Attender(1);
 
@@ -18,9 +18,10 @@ public class Main {
         while (true) {
             userinput = inputReader.next();
             chef.end();
-            comingcustomers.end();
+            comingCustomers.end();
             attender1.end();
-
+            attender2.end();
+            System.exit(0);
         }
     }
 }

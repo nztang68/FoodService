@@ -1,13 +1,13 @@
 package com.eaststartgroup.www;
 
 public class Customer {
-    public int id, timetodecide;
-    public String desiredfood;
+    public int id, timeToDecide;
+    public String desiredFood;
 
-    public Customer(int id, int timetodecide, String desireedfood) {
+    public Customer(int id, int timeToDecide, String desireedfood) {
         this.id = id;
-        this.timetodecide = timetodecide;
-        this.desiredfood = desireedfood;
+        this.timeToDecide = timeToDecide;
+        this.desiredFood = desireedfood;
     }
 
     public String toString() {

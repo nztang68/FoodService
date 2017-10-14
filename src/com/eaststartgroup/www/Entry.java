@@ -1,9 +1,9 @@
 package com.eaststartgroup.www;
 
 public class Entry extends Thread {
-    private boolean threadalive = true;
+    private boolean threadAlive = true;
 
     public void end() {
-        this.threadalive = false;
+        this.threadAlive = false;
     }
 }
