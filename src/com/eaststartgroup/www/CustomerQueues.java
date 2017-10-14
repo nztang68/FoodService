@@ -16,4 +16,25 @@ public class CustomerQueues {
         }
     }
 
+    public static Customer attendCustomer(int queue) {
+        if (queue == 0) {
+            if (customerQueue1.size() > 0) {
+                return customerQueue1.removeFirst();
+            } else {
+                return null;
+            }
+        } else {
+            if (customerQueue2.size() > 0) {
+                return customerQueue2.removeFirst();
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public String toString() {
+        return "\tQueue 1: " + customerQueue1 + "\n" +
+                "\tQueue 2: " + customerQueue2;
+    }
+
 }
