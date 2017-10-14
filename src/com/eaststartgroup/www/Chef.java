@@ -15,18 +15,30 @@ class Chef extends Thread {
     @Override
     public void run() {
         super.run();
-        int timeToCook = 0, whichFood = 0;
+        int timeToCook, whichFood;
         timeToCook = 2000 + 1000*randomGenerator.nextInt(3);
-        try {
-            this.sleep(timeToCook);
-            whichFood = randomGenerator.nextInt(3);
-            System.out.print("Chef on " + (timeToCook/1000) + " seconds cook a ");
-            switch (whichFood) {
-                case 0:
-                    FoodStock.cookSellBurger("cook");
+        while (this.threadAlive) {
+            try {
+                this.sleep(timeToCook);
+                whichFood = randomGenerator.nextInt(3);
+                System.out.print("Chef on " + (timeToCook/1000) + " seconds cook a ");
+                switch (whichFood) {
+                    case 0:
+                        FoodStock.cookSellBurger("cook");
+                        System.out.println("burger");
+                        break;
+                    case 1:
+                        FoodStock.cookSellSandwich("cook");
+                        System.out.println("sandwich");
+                        break;
+                    case 2:
+                        FoodStock.cookSellSalad("cook");
+                        System.out.println("salad");
+                        break;
+              }
+            } catch (InterruptedException e) {
+                System.out.println("Chef interrupted.");
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
 
     }

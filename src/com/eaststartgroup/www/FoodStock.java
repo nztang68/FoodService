@@ -44,4 +44,8 @@ final class FoodStock {
         return false;
     }
 
+    public String toString() {
+        return "\tFood Stock  burger: " + burger + "sandwich: " + sandwich + " salad: " + salad;
+    }
+
 }
